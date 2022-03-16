@@ -19,8 +19,8 @@ const ProductFeed = ({products}) => {
         </div>
 
         {products.slice(5,products.length).map((product,i) => (
-        <div className={`${i % 5 == 0 && 'col-span-2'}`}>
-            <Product key={product.id} {...product} />
+        <div className={`${i % 5 == 0 && 'col-span-2'}`} key={product.id}>
+            <Product  {...product} />
         </div>
         ))}
     </div>
